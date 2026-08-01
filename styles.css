@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  position: relative;
+  isolation: isolate;
+}
+
+body {
+  background-color: rgb(162, 160, 163);
+  font-family: Verdana, sans-serif
+}
+
+.zx-background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.zx-field {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160vmax;
+  height: 160vmax;
+  transform: translate(-50%, -50%) rotate(20deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.zx-row {
+  width: max-content;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.1);
+  font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-size: 0.8rem;
+  line-height: 3;
+  letter-spacing: 0.05em;
+  animation: zx-loop 10s linear infinite;
+}
+
+@keyframes zx-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3%);
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+}
