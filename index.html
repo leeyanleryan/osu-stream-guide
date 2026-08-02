@@ -12,9 +12,10 @@
     <div id="zx-field" class="zx-field"></div>
   </div>
   <main class="content">
-    <img src="./images/logo.png" alt="Keyboard with only Z and X">
-    <h1>osu! Stream Guide</h1>
-    <p>Test</p>
+    <div class="header">
+      <img id="logo" src="./images/logo.png" alt="Keyboard with only Z and X" width="185">
+      <h1>osu! Stream Guide</h1>
+    </div>
   </main>
   <script>
     const field = document.getElementById("zx-field");
@@ -28,6 +29,31 @@
       fragment.appendChild(row);
     }
     field.appendChild(fragment);
+  </script>
+  <script>
+    const logo = document.getElementById("logo");
+    const logoImages = [
+      "./images/logo.png",
+      "./images/logo-2.png"
+    ];
+    let logoInterval;
+    let currentLogo = 0;
+    logoImages.forEach((src) => {
+      const image = new Image();
+      image.src = src;
+    });
+    logo.addEventListener("pointerenter", () => {
+      logoInterval = setInterval(() => {
+        currentLogo = currentLogo === 0 ? 1 : 0;
+        logo.src = logoImages[currentLogo];
+      }, 120);
+    });
+    logo.addEventListener("pointerleave", () => {
+      clearInterval(logoInterval);
+
+      currentLogo = 0;
+      logo.src = logoImages[0];
+    });
   </script>
 </body>
 </html>
