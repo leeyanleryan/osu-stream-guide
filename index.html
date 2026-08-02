@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>osu! Stream Guide</title>
   <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico?v=2">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
   <div class="zx-background" aria-hidden="true">
@@ -17,43 +17,7 @@
       <h1>osu! Stream Guide</h1>
     </div>
   </main>
-  <script>
-    const field = document.getElementById("zx-field");
-    const rowCount = 60;
-    const repetitionsPerRow = 1000;
-    const fragment = document.createDocumentFragment();
-    for (let i = 0; i < rowCount; i++) {
-      const row = document.createElement("div");
-      row.className = "zx-row";
-      row.textContent = "zx".repeat(repetitionsPerRow);
-      fragment.appendChild(row);
-    }
-    field.appendChild(fragment);
-  </script>
-  <script>
-    const logo = document.getElementById("logo");
-    const logoImages = [
-      "./images/logo.png",
-      "./images/logo-2.png"
-    ];
-    let logoInterval;
-    let currentLogo = 0;
-    logoImages.forEach((src) => {
-      const image = new Image();
-      image.src = src;
-    });
-    logo.addEventListener("pointerenter", () => {
-      logoInterval = setInterval(() => {
-        currentLogo = currentLogo === 0 ? 1 : 0;
-        logo.src = logoImages[currentLogo];
-      }, 120);
-    });
-    logo.addEventListener("pointerleave", () => {
-      clearInterval(logoInterval);
-
-      currentLogo = 0;
-      logo.src = logoImages[0];
-    });
-  </script>
+  <script src="./js/zx-background.js"></script>
+  <script src="./js/stream-animation.js"></script>
 </body>
 </html>
