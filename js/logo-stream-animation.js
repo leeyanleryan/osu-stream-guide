@@ -17,13 +17,13 @@ logoImages.forEach((src) => {
 logo.addEventListener("pointerenter", () => {
   logoInterval = setInterval(() => {
   if (currentLogo === 0) {
-      currentLogo = 1;
+    currentLogo = 1;
   }
   else if (currentLogo === 1) {
-      currentLogo = 2;
+    currentLogo = 2;
   }
   else if (currentLogo === 2) {
-      currentLogo = 1;
+    currentLogo = 1;
   }
   logo.src = logoImages[currentLogo];
   }, 120);
