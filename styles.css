@@ -42,7 +42,7 @@ body {
   white-space: nowrap;
   color: rgba(255, 255, 255, 0.15);
   font-family: Verdana;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   line-height: 4;
   letter-spacing: 0.05em;
   animation: zx-loop 10s linear infinite;
