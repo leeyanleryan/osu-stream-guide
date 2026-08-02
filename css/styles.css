@@ -12,7 +12,7 @@ html, body {
 body {
   /* background-color: rgb(162, 160, 163); */
   /* background-color: rgb(233, 219, 229); */
-  background-color: rgb(180, 208, 231);
+  background-color: rgb(173, 206, 233);
   font-family: sans-serif;
 }
 
@@ -40,7 +40,7 @@ body {
 .zx-row {
   width: max-content;
   white-space: nowrap;
-  color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.14);
   font-family: Verdana;
   font-size: 0.85rem;
   line-height: 4;
