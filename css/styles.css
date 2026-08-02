@@ -17,7 +17,7 @@ body {
   transition: background-color 0.4s, color 0.4s;
 }
 
-body.dark-mode {
+html.dark-mode body {
   background-color: rgb(12, 15, 54);
 }
 
@@ -54,7 +54,7 @@ body.dark-mode {
   transition: background-color 0.4s, color 0.4s;
 }
 
-body.dark-mode .zx-row {
+html.dark-mode .zx-row {
   color: rgba(0, 0, 0, 0.16);
 }
 
@@ -82,7 +82,7 @@ body.dark-mode .zx-row {
   transition: background-color 0.4s, color 0.4s;
 }
 
-body.dark-mode .header h1 {
+html.dark-mode .header h1 {
   color: white;
 }
 
