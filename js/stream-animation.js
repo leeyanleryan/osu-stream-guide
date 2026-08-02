@@ -1,7 +1,8 @@
 const logo = document.getElementById("logo");
 const logoImages = [
     "./images/logo.png",
-    "./images/logo-2.png"
+    "./images/logo-x.png",
+    "./images/logo-z.png"
 ];
 let logoInterval;
 let currentLogo = 0;
@@ -11,7 +12,16 @@ logoImages.forEach((src) => {
 });
 logo.addEventListener("pointerenter", () => {
     logoInterval = setInterval(() => {
-    currentLogo = currentLogo === 0 ? 1 : 0;
+    // currentLogo = currentLogo === 0 ? 1 : 0;
+    if (currentLogo === 0) {
+        currentLogo = 1;
+    }
+    else if (currentLogo === 1) {
+        currentLogo = 2;
+    }
+    else if (currentLogo === 2) {
+        currentLogo = 1;
+    }
     logo.src = logoImages[currentLogo];
     }, 120);
 });
