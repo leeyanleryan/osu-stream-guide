@@ -14,6 +14,11 @@ body {
   /* background-color: rgb(233, 219, 229); */
   background-color: rgb(173, 206, 233);
   font-family: sans-serif;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+body.dark-mode {
+  background-color: rgb(12, 15, 54);
 }
 
 .zx-background {
@@ -40,12 +45,17 @@ body {
 .zx-row {
   width: max-content;
   white-space: nowrap;
-  color: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.16);
   font-family: Verdana;
   font-size: 0.85rem;
   line-height: 4;
   letter-spacing: 0.05em;
   animation: zx-loop 10s linear infinite;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+body.dark-mode .zx-row {
+  color: rgba(0, 0, 0, 0.16);
 }
 
 @keyframes zx-loop {
@@ -63,7 +73,30 @@ body {
   padding: 2rem;
 }
 
-.content .header {
+.header {
   display: flex;
   gap: 2rem;
+}
+
+.header h1 {
+  transition: background-color 0.4s, color 0.4s;
+}
+
+body.dark-mode .header h1 {
+  color: white;
+}
+
+.logo {
+  height: 109px;
+  width: 185px;
+}
+
+#pull-chain {
+  margin-left: auto;
+  margin-top: -150px;
+  cursor: pointer;
+}
+
+#pull-chain:active {
+  margin-top: -100px;
 }
