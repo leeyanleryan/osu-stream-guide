@@ -18,7 +18,7 @@ body {
 }
 
 html.dark-mode body {
-  background-color: rgb(12, 15, 54);
+  background-color: rgb(29, 30, 51);
 }
 
 .zx-background {
@@ -45,7 +45,7 @@ html.dark-mode body {
 .zx-row {
   width: max-content;
   white-space: nowrap;
-  color: rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.20);
   font-family: Verdana;
   font-size: 0.95rem;
   line-height: 4;
@@ -55,7 +55,7 @@ html.dark-mode body {
 }
 
 html.dark-mode .zx-row {
-  color: rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.26);
 }
 
 @keyframes zx-loop {
